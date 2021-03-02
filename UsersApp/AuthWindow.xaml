@@ -59,13 +59,13 @@
                 <TextBlock Text="Authorization" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
 
                 <Grid  Margin="0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Sign up"/>
-                    <Button HorizontalAlignment="Right" Content="Sign in" Click ="Button_Reg_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button x:Name="SignUpBtn" HorizontalAlignment="Left" Content="Sign up" Click ="Button_Reg_Click"/>
+                    <Button  HorizontalAlignment="Right" Content="Sign in"  Style="{StaticResource MaterialDesignFlatButton}"/>
                 </Grid>
                 <TextBox x:Name="LoginLabel" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                 <PasswordBox x:Name="PassLabel" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
 
-                <Button Content="Sign in!" Margin="0 20" Click="Button_Auth_Click"/>
+                <Button x:Name="SignInBtn" Content="Sign in!" Margin="0 20" Click="Button_Auth_Click"/>
             </StackPanel>
         </Border>
         <TextBlock Text="Dark Lake Inc." HorizontalAlignment="Left" Margin="152,564,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="2">

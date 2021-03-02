@@ -36,14 +36,6 @@
 
 
 
-        <Button Content="Exit" HorizontalAlignment="Right" Click="Button_Click_Exit" Style="{StaticResource MaterialDesignFlatButton}" Grid.Column="1" Margin="0,10,42,8">
-            <Button.Effect>
-                <BlurEffect Radius="2"/>
-            </Button.Effect>
-
-
-        </Button>
-
 
 
         <Image Source="Resourse/1.png" Margin="0,35,20.5,471" Grid.RowSpan="2">
@@ -57,18 +49,24 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="User account" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
-
-              
-              
-
-               
+                <Button x:Name="Profile" Content="My Profile"  Margin="0 0" Click="Profile_Click"/>
+                <Button x:Name="HelpBtn" Content="Help!"  Click="HelpBtn_Click" Margin="0 20"/>
+                <Button x:Name="Settings" Content="Settings" Margin="0 0" Click="Settings_Click"/>
             </StackPanel>
+
         </Border>
         <TextBlock Text="Dark Lake Inc." HorizontalAlignment="Left" Margin="152,564,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="2">
             <TextBlock.Effect>
                 <BlurEffect Radius="2"/>
             </TextBlock.Effect>
         </TextBlock>
+        <Button Content="Exit" HorizontalAlignment="Right" Click="Button_Click" Style="{StaticResource MaterialDesignFlatButton}"  Margin="0,347,189,225" Height="Auto" Grid.Row="1" Grid.ColumnSpan="2">
+            <Button.Effect>
+                <BlurEffect Radius="2"/>
+            </Button.Effect>
+
+
+        </Button>
 
     </Grid>
 </Window>

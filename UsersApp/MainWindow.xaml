@@ -53,7 +53,7 @@
                 <DropShadowEffect BlurRadius="10" Color="#FF0F306D"/>
             </Image.Effect>
         </Image>
-        <Border Grid.Row="1" MinWidth="200" Margin="24,114,54,124" Background="White" VerticalAlignment="Center" Padding="25" MaxWidth="350" CornerRadius="20" Grid.ColumnSpan="2" Height="366">
+        <Border Grid.Row="1" MinWidth="200" Margin="24,112,57,130" Background="White" VerticalAlignment="Center" Padding="25" MaxWidth="350" CornerRadius="20" Grid.ColumnSpan="2" Height="362">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="600" Color="LightGray" ShadowDepth="4"/>
             </Border.Effect>
@@ -76,6 +76,6 @@
                 <BlurEffect Radius="2"/>
             </TextBlock.Effect>
         </TextBlock>
-       
+
     </Grid>
 </Window>

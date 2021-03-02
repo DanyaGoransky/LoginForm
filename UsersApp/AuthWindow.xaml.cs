@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace UsersApp
 {
@@ -19,9 +20,24 @@ namespace UsersApp
     /// </summary>
     public partial class AuthWindow : Window
     {
+        ApplicationContext db;
         public AuthWindow()
         {
             InitializeComponent();
+            db = new ApplicationContext();
+
+            DoubleAnimation btnAnimation = new DoubleAnimation();
+            DoubleAnimation btnAnimation1 = new DoubleAnimation();
+            btnAnimation.From = 0;
+            btnAnimation.To = 268;
+            btnAnimation.Duration = TimeSpan.FromSeconds(3);
+            SignInBtn.BeginAnimation(Button.WidthProperty, btnAnimation);
+
+            btnAnimation1.From = 0;
+            btnAnimation1.To = 80;
+            btnAnimation1.Duration = TimeSpan.FromSeconds(3);
+            SignUpBtn.BeginAnimation(Button.WidthProperty, btnAnimation1);
+           
         }
 
   

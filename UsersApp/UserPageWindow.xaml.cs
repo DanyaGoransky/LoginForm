@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace UsersApp
 {
@@ -19,14 +20,47 @@ namespace UsersApp
     /// </summary>
     public partial class UserPageWindow : Window
     {
+
+        ApplicationContext db;
         public UserPageWindow()
         {
             InitializeComponent();
+            db = new ApplicationContext();
+
+            DoubleAnimation btnAnimation = new DoubleAnimation();
+            btnAnimation.From = 0;
+            btnAnimation.To = 268;
+            btnAnimation.Duration = TimeSpan.FromSeconds(3);
+            Profile.BeginAnimation(Button.WidthProperty, btnAnimation);
+            HelpBtn.BeginAnimation(Button.WidthProperty, btnAnimation);
+            Settings.BeginAnimation(Button.WidthProperty, btnAnimation);
         }
 
-        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+ 
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
+        }
+
+    
+
+        private void Profile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+
+        }
+
+        private void HelpBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
